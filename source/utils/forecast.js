@@ -17,7 +17,8 @@ else if(body.error)
 }
 else
 {
-callback(undefined,body.daily.data[0].summary+' It is currently '+body.currently.temperature+' degrees out. There is a '+body.currently.precipProbability+'% chance of rain.')
+callback(undefined,body.daily.data[0].summary+' It is currently '+body.currently.temperature+' degree out. There is High '+body.daily.data[0].temperatureHigh+' degree and Low is '+body.daily.data[0].temperatureLow+
+ ' degree. There is a '+body.currently.precipProbability+'% chance of rain.')
 }
     })
 
