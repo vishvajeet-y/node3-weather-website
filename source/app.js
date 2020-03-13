@@ -5,6 +5,7 @@ const geocode1=require('./utils/geocode')
 const forecast1=require('./utils/forecast')
 const chalk=require('chalk')
 const app=express()
+const port=process.env.PORT ||3000
 //Define path for Express config
 const public_directoy=path.join(__dirname,'../public')
 const views_dir=path.join(__dirname,'../template/views')
@@ -113,7 +114,7 @@ app.use(express.static(public_directoy))
              name:'vishvajeet'
          })
     })
-app.listen(3000,()=>
+app.listen(port,()=>
 {
-    console.log('server is up on port 3000')
+    console.log('server is up on port '+port)
 })
